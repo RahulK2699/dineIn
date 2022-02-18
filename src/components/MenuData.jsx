@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
+//import { ItemDetail } from "./ItemDetail";
 
-export const MenuData = ({ categoryData }) => {
+export const MenuData = ({ categoryData, token }) => {
   return (
     <>
       {categoryData.length > 0 ? (

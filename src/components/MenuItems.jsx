@@ -106,7 +106,7 @@ export const MenuItems = () => {
                 key={e.id}
               >
                 <img
-                  className="w-20  rounded-xl  p-4 h-20 bgColor"
+                  className="w-20  rounded-xl  p-4 h-20 bgColor cursor-pointer"
                   src={e.icon}
                   alt="MenuItem"
                 />
