@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
+//import { useContext } from "react";
 export const Breakfast = () => {
   var image = "https://wallpaperaccess.com/full/4883007.jpg";
 
   return (
     <Link to="/breakfast">
       <div className="w-full h-36 justify-center flex mt-10">
+        {/* {` w-full h-36 justify-center flex mt-10  ${l> 0? "hidden" : ""}`} */}
         <div
           className=" bg-no-repeat w-96 h-full bg-cover rounded-2xl brightness-90"
           style={{ backgroundImage: `url(${image})` }}

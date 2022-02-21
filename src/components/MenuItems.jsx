@@ -3,10 +3,9 @@ import { AppContext } from "../context/AuthContext";
 import axios from "axios";
 
 import { MenuData } from "./MenuData";
-//import { getDefaultNormalizer } from "@testing-library/dom";
 
 export const MenuItems = () => {
-  const { handleToken } = useContext(AppContext);
+  const { handleToken, len } = useContext(AppContext);
   const [token, setToken] = useState("");
   const [menuData, setMenuData] = useState([]);
   const [categoryData, setCategoryData] = useState([]);
@@ -37,7 +36,7 @@ export const MenuItems = () => {
       }
     );
     try {
-      console.log(data.data.data.items);
+      //console.log(data.data.data.items);
       setCategoryData(data.data.data.items);
     } catch (error) {
       console.log(error);
@@ -70,7 +69,7 @@ export const MenuItems = () => {
       );
       setToken(data.token);
       handleToken(data.token);
-      console.log(data.token);
+      //console.log(data.token);
     } catch (error) {
       console.log(error);
     }
@@ -93,7 +92,7 @@ export const MenuItems = () => {
   };
 
   return (
-    <div className="w-full">
+    <div className={`${len > 0 ? "hidden" : "w-full"}`}>
       <div className="h-40 mt-20 mb-5 overflow-x-scroll overflow-y-hidden m-auto flex flex-row  max-w-md">
         {menuData &&
           menuData.map((e) => {

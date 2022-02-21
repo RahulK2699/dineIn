@@ -30,7 +30,13 @@ export const MenuData = ({ categoryData, token }) => {
           })}
         </div>
       ) : (
-        <div>null</div>
+        <div className="w-full">
+          <img
+            className="w-96 mx-auto mt-10"
+            src="https://darling-residency.scube.me/assets/icon/no-item.svg"
+            alt="pagenotfound"
+          />
+        </div>
       )}
     </>
   );
